@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Hello!</title>
+    
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+    
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+  </head>  
+  <body>
+    <h1>Light and Sound Memory Game</h1>
+    
+    <p>
+      Welcome to the game! Repeat back the pattern by pressing buttons.
+    </p>
+    <button id="startBtn" onclick="startGame()">
+      Start
+    </button>
+    <button id="stopBtn" onclick="stopGame()" class="hidden">
+      End
+    </button>
+    
+    <div id="progress" class="hidden">
+      Current level: <span id="progressCounter"></span>/10
+    </div>
+    <div id="mistakeDisplay" class="hidden">
+      Current mistakes: <span id="numMistakes"></span>
+    </div>
+    
+    <div id="gameButtonArea">
+      <button id="button1" onclick="guess(1)" onmousedown="startTone(1)" onmouseup="stopTone(1)"><span id="1" class="letter hidden">C</span></button>
+      <button id="button2" onclick="guess(2)" onmousedown="startTone(2)" onmouseup="stopTone(2)"><span id="2" class="letter hidden">D</span></button>
+      <button id="button3" onclick="guess(3)" onmousedown="startTone(3)" onmouseup="stopTone(3)"><span id="3" class="letter hidden">E</span></button>
+      <button id="button4" onclick="guess(4)" onmousedown="startTone(4)" onmouseup="stopTone(4)"><span id="4" class="letter hidden">F</span></button>
+      <button id="button5" onclick="guess(5)" onmousedown="startTone(5)" onmouseup="stopTone(5)"><span id="5" class="letter hidden">G</span></button> 
+      <button id="button6" onclick="guess(6)" onmousedown="startTone(6)" onmouseup="stopTone(6)"><span id="6" class="letter hidden">A</span></button>
+    </div>
+  </body>
+</html>
